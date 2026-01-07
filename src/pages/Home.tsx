@@ -6,7 +6,6 @@ import aprImage from '@/assets/apr.jpg';
 import systemImage from '@/assets/system.png';
 
 const Home = () => {
-
   const features = {
     video: [
       {
@@ -176,14 +175,7 @@ const Home = () => {
       {
         title: 'Player Performance',
         description: 'Track individual metrics and development over time',
-        icon: (
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-            d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
-          />
-        ),
+        icon: <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />,
       },
       {
         title: 'CSV/Excel Export',
@@ -258,97 +250,114 @@ const Home = () => {
 
           <div className='relative max-w-6xl mx-auto'>
             <div className='text-center mb-8'>
-              <h1 className='text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight'>
+              <h1 className='text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight'>
                 Powerful Video Analysis
                 <br />
                 <span className='text-[#2979ff]'>Built for Basketball Coaches</span>
               </h1>
-              <p className='text-base text-slate-600 mb-6 max-w-2xl mx-auto'>
-                Streamline game breakdown, player development, and opponent scouting with
-                frame-accurate playback and intuitive tagging tools.
+              <p className='text-sm md:text-base text-slate-600 mb-6 max-w-2xl mx-auto'>
+                Streamline game breakdown, player development, and opponent scouting with frame-accurate playback and
+                intuitive tagging tools.
               </p>
               <a
                 href='https://wa.me/14044528091?text=Hi%2C%20I%27m%20interested%20in%20Maxmiize%20for%20early%20access'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-block px-7 py-3 bg-[#2979ff] text-white font-medium rounded-md hover:bg-[#1e5bb8] transition-colors'
+                className='inline-block px-6 md:px-7 py-2 md:py-3 bg-[#2979ff] text-white font-medium text-sm md:text-base rounded-md hover:bg-[#1e5bb8] transition-colors'
               >
                 Contact Us for Early Access
               </a>
             </div>
 
             {/* Product Images */}
-            <div className='max-w-5xl mx-auto mt-10 px-4 md:px-0'>
-              <div className='relative flex justify-center min-h-[300px] md:min-h-[450px]'>
-                {/* Main Image - APR (Bigger) */}
-                <div className='relative z-10 w-full md:w-[70%]'>
-                  <img
-                    src={aprImage}
-                    alt='Basketball Video Tagging'
-                    className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
-                  />
-                </div>
+            <div className='max-w-5xl mx-auto mt-10'>
+              {/* Desktop View */}
+              <div className='hidden md:block px-4 md:px-0'>
+                <div className='relative flex justify-center min-h-[450px]'>
+                  {/* Main Image - APR (Bigger) */}
+                  <div className='relative z-10 w-[70%]'>
+                    <img
+                      src={aprImage}
+                      alt='Basketball Video Tagging'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
+                    />
+                  </div>
 
-                {/* Overlapping Image - System (Smaller, Extended to right) */}
-                <div className='absolute top-8 md:top-12 -right-2 md:-right-8 lg:-right-16 w-[50%] md:w-[48%] z-20 hidden md:block'>
-                  <img
-                    src={systemImage}
-                    alt='Multi-Angle Video Playback'
-                    className='w-full rounded-lg border-2 border-gray-300 shadow-xl'
-                  />
+                  {/* Overlapping Image - System (Smaller, Extended to right) */}
+                  <div className='absolute top-12 -right-8 lg:-right-16 w-[48%] z-20'>
+                    <img
+                      src={systemImage}
+                      alt='Multi-Angle Video Playback'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl'
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Mobile: Show second image below */}
-              <div className='block md:hidden mt-6 w-[85%] mx-auto'>
-                <img
-                  src={systemImage}
-                  alt='Multi-Angle Video Playback'
-                  className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
-                />
+              {/* Mobile View */}
+              <div className='block md:hidden px-4'>
+                <div className='relative'>
+                  <div className='w-full'>
+                    <img
+                      src={aprImage}
+                      alt='Basketball Video Tagging'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
+                    />
+                  </div>
+                  <div className='absolute -bottom-20 right-4 w-[80%] z-10'>
+                    <img
+                      src={systemImage}
+                      alt='Multi-Angle Video Playback'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl'
+                    />
+                  </div>
+                </div>
+                {/* Spacer to prevent overlap with next section */}
+                <div className='h-24'></div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section with Tabs */}
-        <section className='py-16 bg-[#00aded]/10'>
-          <div className='max-w-6xl mx-auto px-6'>
-            <div className='text-center mb-12'>
-              <h2 className='text-3xl font-bold text-slate-900 mb-2'>
+        <section className='py-6 md:py-16 bg-[#00aded]/10'>
+          <div className='max-w-6xl mx-auto px-4 md:px-6'>
+            <div className='text-center mb-4 md:mb-12'>
+              <h2 className='text-2xl md:text-3xl font-bold text-slate-900 mb-1 md:mb-2'>
                 Complete Basketball Workflow
               </h2>
-              <p className='text-base text-slate-600'>From live capture to film room presentation</p>
+              <p className='text-sm md:text-base text-slate-600'>From live capture to film room presentation</p>
             </div>
 
             <Tabs defaultValue='video' className='w-full'>
               {/* Tab Navigation */}
-              <div className='flex justify-center mb-10'>
-                <TabsList className='bg-white p-1 rounded-lg shadow-sm border border-gray-200'>
-                  {tabs.map((tab) => (
-                    <TabsTrigger
-                      key={tab.id}
-                      value={tab.id}
-                      className='px-5 py-2.5 text-sm font-medium data-[state=active]:bg-[#2979ff] data-[state=active]:text-white data-[state=active]:shadow-md'
-                    >
-                      {tab.label}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+              <div className='mb-4 md:mb-10 -mx-4 md:mx-0'>
+                <div className='overflow-x-auto px-4 md:px-0'>
+                  <div className='flex justify-start md:justify-center'>
+                    <TabsList className='bg-white p-1 rounded-lg shadow-sm border border-gray-200 inline-flex gap-1 mr-4 md:mr-0'>
+                      {tabs.map(tab => (
+                        <TabsTrigger
+                          key={tab.id}
+                          value={tab.id}
+                          className='px-2.5 md:px-5 py-1.5 md:py-2.5 text-xs md:text-sm font-medium data-[state=active]:bg-[#2979ff] data-[state=active]:text-white data-[state=active]:shadow-md whitespace-nowrap'
+                        >
+                          {tab.label}
+                        </TabsTrigger>
+                      ))}
+                    </TabsList>
+                  </div>
+                </div>
               </div>
 
               {/* Tab Content */}
-              {tabs.map((tab) => (
+              {tabs.map(tab => (
                 <TabsContent key={tab.id} value={tab.id} className='mt-0'>
-                  <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+                  <div className='grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6'>
                     {features[tab.id as keyof typeof features].map((feature, index) => (
-                      <div
-                        key={index}
-                        className='bg-white p-6 rounded-lg border border-gray-200'
-                      >
-                        <div className='w-10 h-10 bg-[#2979ff] rounded-lg flex items-center justify-center mb-4'>
+                      <div key={index} className='bg-white p-3 md:p-6 rounded-lg border border-gray-200'>
+                        <div className='w-8 h-8 md:w-10 md:h-10 bg-[#2979ff] rounded-lg flex items-center justify-center mb-2 md:mb-4'>
                           <svg
-                            className='w-5 h-5 text-white'
+                            className='w-4 h-4 md:w-5 md:h-5 text-white'
                             fill='none'
                             stroke='currentColor'
                             viewBox='0 0 24 24'
@@ -356,8 +365,8 @@ const Home = () => {
                             {feature.icon}
                           </svg>
                         </div>
-                        <h3 className='text-lg font-bold text-slate-900 mb-2'>{feature.title}</h3>
-                        <p className='text-sm text-slate-600'>{feature.description}</p>
+                        <h3 className='text-base md:text-lg font-bold text-slate-900 mb-1 md:mb-2'>{feature.title}</h3>
+                        <p className='text-xs md:text-sm text-slate-600'>{feature.description}</p>
                       </div>
                     ))}
                   </div>
@@ -368,25 +377,25 @@ const Home = () => {
         </section>
 
         {/* CTA Section */}
-        <section className='py-16 bg-white'>
-          <div className='max-w-4xl mx-auto px-6'>
-            <div className='bg-[#2979ff] rounded-2xl p-12 text-center'>
-              <h2 className='text-3xl font-bold text-white mb-3'>Ready to Get Started?</h2>
-              <p className='text-base text-white/90 mb-8'>
+        <section className='py-8 md:py-16 bg-white'>
+          <div className='max-w-4xl mx-auto px-4 md:px-6'>
+            <div className='bg-[#2979ff] rounded-2xl p-6 md:p-12 text-center'>
+              <h2 className='text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3'>Ready to Get Started?</h2>
+              <p className='text-sm md:text-base text-white/90 mb-6 md:mb-8'>
                 Join basketball coaches using Maxmiize for video analysis
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-3 md:gap-4 justify-center'>
                 <a
                   href='https://wa.me/14044528091?text=Hi%2C%20I%27m%20interested%20in%20Maxmiize%20for%20early%20access'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='px-7 py-3 bg-white text-[#2979ff] font-medium rounded-md hover:bg-gray-100 transition-colors'
+                  className='px-6 md:px-7 py-2 md:py-3 bg-white text-[#2979ff] font-medium text-sm md:text-base rounded-md hover:bg-gray-100 transition-colors'
                 >
                   Get Started
                 </a>
                 <Link
                   to='/terms'
-                  className='px-7 py-3 bg-white/10 text-white font-medium rounded-md hover:bg-white/20 transition-colors border border-white/20'
+                  className='px-6 md:px-7 py-2 md:py-3 bg-white/10 text-white font-medium text-sm md:text-base rounded-md hover:bg-white/20 transition-colors border border-white/20'
                 >
                   View Terms
                 </Link>

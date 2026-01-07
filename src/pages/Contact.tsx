@@ -11,9 +11,7 @@ const Contact = () => {
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
           <div className='text-center mb-12'>
             <h1 className='text-4xl font-bold text-gray-900 mb-4'>Contact Us</h1>
-            <p className='text-lg text-gray-600'>
-              Get in touch with our team. We'd love to hear from you.
-            </p>
+            <p className='text-lg text-gray-600'>Get in touch with our team. We'd love to hear from you.</p>
           </div>
 
           <div className='bg-white rounded-lg shadow-sm p-8 md:p-12'>
@@ -42,10 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Email</h3>
-                  <a
-                    href='mailto:info@maxmiize.com'
-                    className='text-[#2979ff] hover:underline text-lg'
-                  >
+                  <a href='mailto:info@maxmiize.com' className='text-[#2979ff] hover:underline text-lg'>
                     info@maxmiize.com
                   </a>
                 </div>
@@ -64,8 +59,8 @@ const Contact = () => {
 
             <div className='mt-12 pt-8 border-t border-gray-200'>
               <p className='text-center text-gray-600'>
-                For inquiries about our sports video analysis platform, licensing, or support,
-                please reach out via email and our team will respond within 1-2 business days.
+                For inquiries about our sports video analysis platform, licensing, or support, please reach out via
+                email and our team will respond within 1-2 business days.
               </p>
             </div>
           </div>
