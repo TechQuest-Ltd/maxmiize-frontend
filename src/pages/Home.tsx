@@ -249,13 +249,13 @@ const Home = () => {
           <div className='absolute inset-0 bg-linear-to-b from-gray-50 to-white'></div>
 
           <div className='relative max-w-6xl mx-auto'>
-            <div className='text-center mb-8'>
-              <h1 className='text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight'>
+            <div className='text-center mb-8 animate-fade-in'>
+              <h1 className='text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight animate-slide-up'>
                 Powerful Video Analysis
                 <br />
                 <span className='text-[#2979ff]'>Built for Basketball Coaches</span>
               </h1>
-              <p className='text-sm md:text-base text-slate-600 mb-6 max-w-2xl mx-auto'>
+              <p className='text-sm md:text-base text-slate-600 mb-6 max-w-2xl mx-auto animate-slide-up animation-delay-200'>
                 Streamline game breakdown, player development, and opponent scouting with frame-accurate playback and
                 intuitive tagging tools.
               </p>
@@ -263,7 +263,7 @@ const Home = () => {
                 href='https://wa.me/14044528091?text=Hi%2C%20I%27m%20interested%20in%20Maxmiize%20for%20early%20access'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-block px-6 md:px-7 py-2 md:py-3 bg-[#2979ff] text-white font-medium text-sm md:text-base rounded-md hover:bg-[#1e5bb8] transition-colors'
+                className='inline-block px-6 md:px-7 py-2 md:py-3 bg-[#2979ff] text-white font-medium text-sm md:text-base rounded-md hover:bg-[#1e5bb8] hover:scale-105 transition-all duration-300 animate-slide-up animation-delay-400'
               >
                 Contact Us for Early Access
               </a>
@@ -275,20 +275,20 @@ const Home = () => {
               <div className='hidden md:block px-4 md:px-0'>
                 <div className='relative flex justify-center min-h-[450px]'>
                   {/* Main Image - APR (Bigger) */}
-                  <div className='relative z-10 w-[70%]'>
+                  <div className='relative z-10 w-[70%] animate-slide-up animation-delay-600'>
                     <img
                       src={aprImage}
                       alt='Basketball Video Tagging'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300'
                     />
                   </div>
 
                   {/* Overlapping Image - System (Smaller, Extended to right) */}
-                  <div className='absolute top-12 -right-8 lg:-right-16 w-[48%] z-20'>
+                  <div className='absolute top-12 -right-8 lg:-right-16 w-[48%] z-20 animate-slide-left animation-delay-800'>
                     <img
                       src={systemImage}
                       alt='Multi-Angle Video Playback'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl hover:shadow-2xl transition-shadow duration-300'
                     />
                   </div>
                 </div>
@@ -297,14 +297,14 @@ const Home = () => {
               {/* Mobile View */}
               <div className='block md:hidden px-4'>
                 <div className='relative'>
-                  <div className='w-full'>
+                  <div className='w-full animate-slide-up animation-delay-600'>
                     <img
                       src={aprImage}
                       alt='Basketball Video Tagging'
                       className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
                     />
                   </div>
-                  <div className='absolute -bottom-20 right-4 w-[80%] z-10'>
+                  <div className='absolute -bottom-20 right-4 w-[80%] z-10 animate-slide-left animation-delay-800'>
                     <img
                       src={systemImage}
                       alt='Multi-Angle Video Playback'
@@ -322,19 +322,19 @@ const Home = () => {
         {/* Features Section with Tabs */}
         <section className='py-6 md:py-16 bg-[#00aded]/10'>
           <div className='max-w-6xl mx-auto px-4 md:px-6'>
-            <div className='text-center mb-4 md:mb-12'>
-              <h2 className='text-2xl md:text-3xl font-bold text-slate-900 mb-1 md:mb-2'>
+            <div className='text-center mb-4 md:mb-12 animate-fade-in'>
+              <h2 className='text-2xl md:text-3xl font-bold text-slate-900 mb-1 md:mb-2 animate-slide-up'>
                 Complete Basketball Workflow
               </h2>
-              <p className='text-sm md:text-base text-slate-600'>From live capture to film room presentation</p>
+              <p className='text-sm md:text-base text-slate-600 animate-slide-up animation-delay-200'>From live capture to film room presentation</p>
             </div>
 
             <Tabs defaultValue='video' className='w-full'>
               {/* Tab Navigation */}
-              <div className='mb-4 md:mb-10 -mx-4 md:mx-0'>
-                <div className='overflow-x-auto px-4 md:px-0'>
-                  <div className='flex justify-start md:justify-center'>
-                    <TabsList className='bg-white p-1 rounded-lg shadow-sm border border-gray-200 inline-flex gap-1 mr-4 md:mr-0'>
+              <div className='mb-4 md:mb-10'>
+                <div className='overflow-x-auto md:overflow-visible px-4 md:px-0 -mx-4 md:mx-0'>
+                  <div className='flex justify-start md:justify-center min-w-min px-4 md:px-0'>
+                    <TabsList className='bg-white p-1 rounded-lg shadow-sm border border-gray-200 inline-flex gap-1'>
                       {tabs.map(tab => (
                         <TabsTrigger
                           key={tab.id}
@@ -354,8 +354,8 @@ const Home = () => {
                 <TabsContent key={tab.id} value={tab.id} className='mt-0'>
                   <div className='grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6'>
                     {features[tab.id as keyof typeof features].map((feature, index) => (
-                      <div key={index} className='bg-white p-3 md:p-6 rounded-lg border border-gray-200'>
-                        <div className='w-8 h-8 md:w-10 md:h-10 bg-[#2979ff] rounded-lg flex items-center justify-center mb-2 md:mb-4'>
+                      <div key={index} className='bg-white p-3 md:p-6 rounded-lg border border-gray-200 hover:border-[#2979ff] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in' style={{animationDelay: `${index * 100}ms`}}>
+                        <div className='w-8 h-8 md:w-10 md:h-10 bg-[#2979ff] rounded-lg flex items-center justify-center mb-2 md:mb-4 group-hover:scale-110 transition-transform duration-300'>
                           <svg
                             className='w-4 h-4 md:w-5 md:h-5 text-white'
                             fill='none'
@@ -379,23 +379,23 @@ const Home = () => {
         {/* CTA Section */}
         <section className='py-8 md:py-16 bg-white'>
           <div className='max-w-4xl mx-auto px-4 md:px-6'>
-            <div className='bg-[#2979ff] rounded-2xl p-6 md:p-12 text-center'>
-              <h2 className='text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3'>Ready to Get Started?</h2>
-              <p className='text-sm md:text-base text-white/90 mb-6 md:mb-8'>
+            <div className='bg-[#2979ff] rounded-2xl p-6 md:p-12 text-center animate-fade-in hover:shadow-2xl transition-shadow duration-300'>
+              <h2 className='text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3 animate-slide-up'>Ready to Get Started?</h2>
+              <p className='text-sm md:text-base text-white/90 mb-6 md:mb-8 animate-slide-up animation-delay-200'>
                 Join basketball coaches using Maxmiize for video analysis
               </p>
-              <div className='flex flex-col sm:flex-row gap-3 md:gap-4 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-slide-up animation-delay-400'>
                 <a
                   href='https://wa.me/14044528091?text=Hi%2C%20I%27m%20interested%20in%20Maxmiize%20for%20early%20access'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='px-6 md:px-7 py-2 md:py-3 bg-white text-[#2979ff] font-medium text-sm md:text-base rounded-md hover:bg-gray-100 transition-colors'
+                  className='px-6 md:px-7 py-2 md:py-3 bg-white text-[#2979ff] font-medium text-sm md:text-base rounded-md hover:bg-gray-100 hover:scale-105 transition-all duration-300'
                 >
                   Get Started
                 </a>
                 <Link
                   to='/terms'
-                  className='px-6 md:px-7 py-2 md:py-3 bg-white/10 text-white font-medium text-sm md:text-base rounded-md hover:bg-white/20 transition-colors border border-white/20'
+                  className='px-6 md:px-7 py-2 md:py-3 bg-white/10 text-white font-medium text-sm md:text-base rounded-md hover:bg-white/20 hover:scale-105 transition-all duration-300 border border-white/20'
                 >
                   View Terms
                 </Link>

@@ -9,12 +9,12 @@ const Terms = () => {
       <main className='grow bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16'>
           <div className='p-4 md:p-8 lg:p-12'>
-            <h1 className='text-2xl md:text-4xl font-bold text-gray-900 mb-2 text-center'>Terms & Conditions</h1>
-            <p className='text-center text-sm md:text-base text-gray-600 mb-8 md:mb-12'>
+            <h1 className='text-2xl md:text-4xl font-bold text-gray-900 mb-2 text-center animate-slide-up'>Terms & Conditions</h1>
+            <p className='text-center text-sm md:text-base text-gray-600 mb-8 md:mb-12 animate-slide-up animation-delay-200'>
               Please read these terms carefully
             </p>
 
-            <div className='max-w-none space-y-6 md:space-y-8 text-gray-700'>
+            <div className='max-w-none space-y-6 md:space-y-8 text-gray-700 animate-fade-in animation-delay-400'>
               <section>
                 <h2 className='text-xl md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4'>Introduction</h2>
                 <p className='text-base leading-relaxed'>
