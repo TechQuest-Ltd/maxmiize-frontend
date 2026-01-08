@@ -12,7 +12,7 @@ const BlurImage = ({ src, alt, className, ...props }: BlurImageProps) => {
   const [hasError, setHasError] = useState(false);
 
   return (
-    <div className={cn('relative overflow-hidden', className)}>
+    <div className={cn('relative overflow-hidden w-full aspect-[16/10]', className)}>
       {isLoading && <div className='absolute inset-0 bg-gray-200 animate-pulse' />}
       {hasError ? (
         <div className='absolute inset-0 bg-gray-300 flex items-center justify-center'>
@@ -22,7 +22,7 @@ const BlurImage = ({ src, alt, className, ...props }: BlurImageProps) => {
         <img
           src={src}
           alt={alt}
-          className={cn('transition-opacity duration-300', isLoading ? 'opacity-0' : 'opacity-100', className)}
+          className={cn('w-full h-full object-cover transition-opacity duration-300', isLoading ? 'opacity-0' : 'opacity-100')}
           onLoad={() => setIsLoading(false)}
           onError={() => {
             setIsLoading(false);

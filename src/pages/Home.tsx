@@ -274,13 +274,13 @@ const Home = () => {
             <div className='max-w-5xl mx-auto mt-10'>
               {/* Desktop View */}
               <div className='hidden md:block px-4 md:px-0'>
-                <div className='relative flex justify-center min-h-[450px]'>
+                <div className='relative flex justify-center min-h-112.5'>
                   {/* Main Image - APR (Bigger) */}
                   <div className='relative z-10 w-[70%]'>
                     <BlurImage
                       src={aprImage}
                       alt='Basketball Video Tagging'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
+                      className='w-full rounded-lg border border-gray-300'
                     />
                   </div>
 
@@ -289,7 +289,7 @@ const Home = () => {
                     <BlurImage
                       src={systemImage}
                       alt='Multi-Angle Video Playback'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl'
+                      className='w-full rounded-lg border border-gray-300'
                     />
                   </div>
                 </div>
@@ -302,14 +302,14 @@ const Home = () => {
                     <BlurImage
                       src={aprImage}
                       alt='Basketball Video Tagging'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
+                      className='w-full rounded-lg border border-gray-300'
                     />
                   </div>
                   <div className='absolute -bottom-20 right-4 w-[80%] z-10'>
                     <BlurImage
                       src={systemImage}
                       alt='Multi-Angle Video Playback'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl'
+                      className='w-full rounded-lg border border-gray-300'
                     />
                   </div>
                 </div>
