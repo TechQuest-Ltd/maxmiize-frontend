@@ -6,14 +6,14 @@ const Navbar = () => {
     <nav className='sticky top-0 z-50 bg-white/30 backdrop-blur-xl backdrop-saturate-150 animate-fade-in'>
       <div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
-          <Link to='/' className='flex items-center hover:scale-105 transition-transform duration-200'>
+          <Link to='/' className='flex items-center hover:scale-102 transition-transform duration-500'>
             <img src={LogoSvg} alt='Maxmiize Logo' className='h-6 md:h-8' />
           </Link>
 
           <div className='flex items-center gap-4'>
             <Link
               to='/terms'
-              className='text-gray-700 hover:text-[#2979ff] transition-all duration-200 font-medium text-sm md:text-base hover:scale-105'
+              className='text-gray-700 hover:text-[#2979ff] transition-all duration-500 font-medium text-xs md:text-sm hover:scale-102'
             >
               Terms & Conditions
             </Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
               href='https://wa.me/14044528091?text=Hi%2C%20I%27m%20interested%20in%20Maxmiize'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-[#25D366] hover:text-[#20BA5A] transition-all duration-200 hover:scale-110'
+              className='text-[#25D366] hover:text-[#20BA5A] transition-all duration-500 hover:scale-105'
               aria-label='Contact us on WhatsApp'
             >
               <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
