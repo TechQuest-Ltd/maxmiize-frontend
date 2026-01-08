@@ -275,20 +275,20 @@ const Home = () => {
               <div className='hidden md:block px-4 md:px-0'>
                 <div className='relative flex justify-center min-h-[450px]'>
                   {/* Main Image - APR (Bigger) */}
-                  <div className='relative z-10 w-[70%] animate-slide-up animation-delay-600'>
+                  <div className='relative z-10 w-[70%]'>
                     <img
                       src={aprImage}
                       alt='Basketball Video Tagging'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
                     />
                   </div>
 
                   {/* Overlapping Image - System (Smaller, Extended to right) */}
-                  <div className='absolute top-12 -right-8 lg:-right-16 w-[48%] z-20 animate-slide-left animation-delay-800'>
+                  <div className='absolute top-12 -right-8 lg:-right-16 w-[48%] z-20'>
                     <img
                       src={systemImage}
                       alt='Multi-Angle Video Playback'
-                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl hover:shadow-2xl transition-shadow duration-300'
+                      className='w-full rounded-lg border-2 border-gray-300 shadow-xl'
                     />
                   </div>
                 </div>
@@ -297,14 +297,14 @@ const Home = () => {
               {/* Mobile View */}
               <div className='block md:hidden px-4'>
                 <div className='relative'>
-                  <div className='w-full animate-slide-up animation-delay-600'>
+                  <div className='w-full'>
                     <img
                       src={aprImage}
                       alt='Basketball Video Tagging'
                       className='w-full rounded-lg border-2 border-gray-300 shadow-lg'
                     />
                   </div>
-                  <div className='absolute -bottom-20 right-4 w-[80%] z-10 animate-slide-left animation-delay-800'>
+                  <div className='absolute -bottom-20 right-4 w-[80%] z-10'>
                     <img
                       src={systemImage}
                       alt='Multi-Angle Video Playback'
@@ -354,8 +354,8 @@ const Home = () => {
                 <TabsContent key={tab.id} value={tab.id} className='mt-0'>
                   <div className='grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6'>
                     {features[tab.id as keyof typeof features].map((feature, index) => (
-                      <div key={index} className='bg-white p-3 md:p-6 rounded-lg border border-gray-200 hover:border-[#2979ff] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in' style={{animationDelay: `${index * 100}ms`}}>
-                        <div className='w-8 h-8 md:w-10 md:h-10 bg-[#2979ff] rounded-lg flex items-center justify-center mb-2 md:mb-4 group-hover:scale-110 transition-transform duration-300'>
+                      <div key={index} className='bg-white p-3 md:p-6 rounded-lg border border-gray-200 hover:border-[#2979ff] transition-colors duration-200'>
+                        <div className='w-8 h-8 md:w-10 md:h-10 bg-[#2979ff] rounded-lg flex items-center justify-center mb-2 md:mb-4'>
                           <svg
                             className='w-4 h-4 md:w-5 md:h-5 text-white'
                             fill='none'
